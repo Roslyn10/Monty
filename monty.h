@@ -42,5 +42,7 @@ typedef struct instruction_s
 
 /*Functions*/
 void nop(void);
+int main(int argc, char **argvi[]);
+
 
 #endif /**MONYY_H**/

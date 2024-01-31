@@ -1,7 +1,16 @@
 #include "monty.h"
 #include <stdio.h>
 
-int main(int argc, char **argv)
+/**
+ * main - Main entry point of monty
+ * Description - Entry point
+ * @argc: Number of arguments 
+ * @argv:
+ * Return:
+ */
+
+
+int main(int argc, char **argvi[])
 {
 	(void) argv;
 
