@@ -20,7 +20,7 @@ void f_sub(stack_t **head, unsigned int counter)
 		fclose(bus.file);
 		free(bus.content);
 		free_stack(*head);
-		exit(EXIT_FAILIRE);
+		exit(EXIT_FAILURE);
 	}
 	aux = *head;
 	sus = aux->next->n - aux->n;

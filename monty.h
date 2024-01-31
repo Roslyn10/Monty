@@ -2,9 +2,11 @@
 #define MONTY_H
 
 #include <stdio.h>
-#include <stderr.h>
+#include <stddef.h>
+#include <errno.h>
 #include <unistd.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 
 /**
