@@ -2,7 +2,7 @@
 
 /**
  * sub - Opcode that subracts the top two values on the stack
- * Description - Subtracts the top two values 
+ * Description - Subtracts the top two values
  * @head: Pointer to pointer to the head of the stack
  * @counter: Number of lines
  * Return: No return (nothing)

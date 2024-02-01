@@ -1,10 +1,11 @@
 #include "monty.h"
 
 /**
- * f_mod - 
- * Description - 
- * @head: stack head
- * @counter: line_number
+ * f_mod - Opcode that computes the remainder of the division...
+ * of the first two codes
+ * Description - Computes the remainder of the division of the top values
+ * @head: Pointer to pointer to head of the stack
+ * @counter: Number of lines
  * Return: No return (Nothing)
  */
 void f_mod(stack_t **head, unsigned int counter)

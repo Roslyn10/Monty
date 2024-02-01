@@ -1,10 +1,11 @@
 #include "monty.h"
 /**
- * f_pchar - prints the char at the top of the stack,
- * followed by a new line
- * @head: stack head
- * @counter: line_number
- * Return: no return
+ * f_pchar - Opcode that prints the corresponding character to the ASCII...
+ * value, at the top of the stack
+ * Description - Prints the ASCII value corresponding with the top value
+ * @head: Pointer to pointer at the head of the stack
+ * @counter: Number of lines
+ * Return: No return (Nothing)
  */
 void f_pchar(stack_t **head, unsigned int counter)
 {

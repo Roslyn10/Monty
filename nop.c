@@ -8,7 +8,7 @@
 
 void nop(void)
 {
-	return;
+	return (0);
 }
 
 /**
