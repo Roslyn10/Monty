@@ -3,6 +3,8 @@ Monty
 
 Description
 -----------
+* Monty is an interpreter written in C. It is not complete or perfect and there could be some errors when using it
+
 
 Features
 --------
@@ -10,7 +12,7 @@ Features
 
 Limitations
 ------------
-
+* Not complete as of yet, but we will update it when time allows
 
 Apperciation
 ------------
