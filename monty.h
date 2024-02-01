@@ -60,7 +60,7 @@ typedef struct instruction_s
 
 /*Functions*/
 void nop(void);
-int main(int argc, char **argvi[]);
+int main(int argc, char *argv[]);
 void free_stack(stack_t *stack);
 void add(stack_t **head, unsigned int counter);
 void f_div(stack_t **head, unsigned int counter);
