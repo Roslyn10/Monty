@@ -1,13 +1,14 @@
 #include "monty.h"
 
 /**
- * f_swap - Opcode that swaps the two top values on the stack
+ * swap - Opcode that swaps the two top values on the stack
  * Description - Swaps the two top values on the stack
  * @head: Pointer to pointer to the head of the stack
  * @counter: Number of lines
  * Return: No return (nothing)
  */
-void f_swap(stack_t **head, unsigned int counter)
+
+void swap(stack_t **head, unsigned int counter)
 {
 	stack_t *h;
 	int len = 0, aux;

@@ -1,13 +1,14 @@
 #include "monty.h"
 
 /**
- * f_sub - Opcode that subracts the top two values on the stack
+ * sub - Opcode that subracts the top two values on the stack
  * Description - Subtracts the top two values 
  * @head: Pointer to pointer to the head of the stack
  * @counter: Number of lines
  * Return: No return (nothing)
  */
-void f_sub(stack_t **head, unsigned int counter)
+
+void sub(stack_t **head, unsigned int counter)
 {
 	stack_t *aux;
 	int sus, nodes;
