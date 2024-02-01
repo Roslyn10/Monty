@@ -6,7 +6,7 @@
  * Return - No return (nothing)
  */
 
-void nop(void)
+int nop(void)
 {
 	return (0);
 }
