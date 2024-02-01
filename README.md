@@ -35,3 +35,8 @@ Written by
 ----------
 * Barbra Wasiwo Tendere
 * Roslyn Lewis
+
+Contact informtation
+--------------------
+* Barbra: b.wasiwo.bw@gmail.com
+* Roslyn: roslynclewis1004@gmail.com
