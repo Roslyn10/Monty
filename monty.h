@@ -43,6 +43,9 @@ typedef struct instruction_s
 /*Functions*/
 void nop(void);
 int main(int argc, char **argvi[]);
+void free_stack(stack_t *stack);
+
+
 
 
 #endif /**MONYY_H**/

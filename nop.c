@@ -14,8 +14,19 @@ void nop(void)
 /**
  * free_stack - A function that frees the stack
  * Description - Frees the stack when done
- *
- *
- * Rrturn: 
+ * @stack: a pointer to the head of the stack
+ * Return: No return (nothing)
  */
 
+void free_stack(stack_t *stack)
+{
+	stack_t *current = stack;
+	stack_t *next;
+
+	while (current != NULL)
+	{
+		next = current->next;
+		free(current);
+		current = next;
+	}
+}
