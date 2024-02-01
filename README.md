@@ -6,6 +6,7 @@ Description
 
 Features
 --------
+* Interprets Monty bytecodes using A C interpreter and executes arguments passed 
 
 Limitations
 ------------
