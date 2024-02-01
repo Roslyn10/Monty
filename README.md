@@ -10,8 +10,10 @@ Features
 Limitations
 ------------
 
+
 Apperciation
 ------------
+Appreciation goes to both contributors for cooperation in making the project a success and meeting up with the deadline
 
 Resources used
 --------------
