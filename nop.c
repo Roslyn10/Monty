@@ -6,9 +6,9 @@
  * Return - No return (nothing)
  */
 
-int nop(void)
+void nop(void)
 {
-	return (0);
+	/**This function does nothing**/
 }
 
 /**
