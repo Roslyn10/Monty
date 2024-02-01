@@ -1,10 +1,11 @@
 #include "monty.h"
 
 /**
- * f_add - adds tge top two elements of the stack.
- * @head: stack head
- * @counter: line_number
- * Return: no return
+ * f_add - Opcode that adds the two top values on a stack
+ * Description - Adds the two top values on a stack
+ * @head: Pointer to pointer to the head of a stack
+ * @counter: Number of lines
+ * Return: No return (nothing)
  */
 void f_add(stack_t **head, unsigned int counter)
 {

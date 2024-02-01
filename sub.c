@@ -1,10 +1,11 @@
 #include "monty.h"
 
 /**
- * f_sub - subtraction
- * @head: stack head
- * @counter: line_number
- * Return: no return
+ * f_sub - Opcode that subracts the top two values on the stack
+ * Description - Subtracts the top two values 
+ * @head: Pointer to pointer to the head of the stack
+ * @counter: Number of lines
+ * Return: No return (nothing)
  */
 void f_sub(stack_t **head, unsigned int counter)
 {
@@ -16,7 +17,7 @@ void f_sub(stack_t **head, unsigned int counter)
 		aux = aux->next;
 	if (nodes < 2)
 	{
-		fprint(stderr, "L%d: can't sub, stack too short\n", counter);
+		fprintf(stderr, "%d: can't sub, stack too short\n", counter);
 		fclose(bus.file);
 		free(bus.content);
 		free_stack(*head);

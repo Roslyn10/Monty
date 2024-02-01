@@ -1,11 +1,13 @@
 #include "monty.h"
 
 /**
- * f_mul - multiplies the top teo elements of the stack.
- * @head: stack head
- * @counter: line_number
- * Return: no return
+ * f_mul - Opcode that multiplies the two top values on the stack
+ * Desciption - Multiplies the two top values
+ * @head: Pointer to pointer to head of stack
+ * @counter: Number of lines
+ * Return: No return (nothing)
  */
+
 void f_mul(stack_t **head, unsigned int counter)
 {
 	stack_t *h;

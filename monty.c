@@ -12,7 +12,7 @@
 
 int main(int argc, char **argvi[])
 {
-	(void) argv;
+	(void) argv[];
 
 	if (argc != 2)
 	{
