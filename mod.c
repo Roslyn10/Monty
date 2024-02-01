@@ -8,6 +8,7 @@
  * @counter: Number of lines
  * Return: No return (Nothing)
  */
+
 void f_mod(stack_t **head, unsigned int counter)
 {
 	stack_t *h;

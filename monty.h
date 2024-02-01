@@ -68,5 +68,8 @@ void mul(stack_t **head, unsigned int counter);
 void pop(stack_t **head, unsigned int counter);
 void sub(stack_t **head, unsigned int counter);
 void swap(stack_t **head, unsigned int counter);
+void f_pchar(stack_t **head, unsigned int counter);
+void f_mod(stack_t **head, unsigned int counter);
+
 
 #endif /**MONYY_H**/
