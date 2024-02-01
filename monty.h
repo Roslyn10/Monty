@@ -46,7 +46,7 @@ void nop(void);
 int main(int argc, char **argvi[]);
 void free_stack(stack_t *stack);
 void add(stack_t **head, unsigned int counter);
-void div(stack_t **head, unsigned int counter);
+void f_div(stack_t **head, unsigned int counter);
 void mul(stack_t **head, unsigned int counter);
 void pop(stack_t **head, unsigned int counter);
 void sub(stack_t **head, unsigned int counter);
