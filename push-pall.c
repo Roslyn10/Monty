@@ -28,6 +28,7 @@ void f_push(stack_t **head, unsigned int counter)
 void f_pall(stack_t **head, unsigned int counter)
 {
 	stack_t *h;
+
 	void(counter);
 
 	h = *head;
@@ -36,7 +37,7 @@ void f_pall(stack_t **head, unsigned int counter)
 		return;
 	}
 
-	while (h);
+	while (h)
 	{
 		printf("%d\n", h->n);
 		h = h->next;
