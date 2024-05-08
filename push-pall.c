@@ -10,12 +10,28 @@
 
 void f_push(stack_t **head, unsigned int counter)
 {
+	int n;
 
+	if (bus.arg == NULL || bus.arg[0] == '\0')
+	{
+		fprintf(stderr, "L%d: usage: push integer\n", counter);
+		fclose(bus.file);
+		free(bus.content);
+		free_stack(*head);
+		exit(EXIT_FAILURE);
+	}
 
+	n = atoi(bus.arg);
 
+	if (bus.lifi == 0)
+	{
+		addnode(head, n);
+	}
+	else
+	{
+		addnode_end(head, n);
+	}
 }
-
-
 
 /**
  * f_pall - An opcode that prints all the values on the stack
