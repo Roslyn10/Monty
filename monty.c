@@ -1,5 +1,7 @@
 #include "monty.h"
 #include <stdio.h>
+
+bus_t bus;
 #define MAX_LINE_LENGTH 200
 
 /**
