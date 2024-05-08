@@ -1,14 +1,66 @@
 #include "monty.h"
 #include <stdio.h>
-
-bus_t bus;
 #define MAX_LINE_LENGTH 200
+
+/**
+ * execute_opcode - A function that is used to execute the opcodes
+ * Description - Executes the opcodes
+ * @stack: The stack
+ * @opcode: The opcodes
+ * @line_number: The line number
+ * Return: No return (nothing)
+ */
+
+void execute_opcode(stack_t **stack, const char *opcode, int line_number)
+{
+	if (strcmp(opcode, "nop") == 0)
+	{
+		nop();
+	}
+	else if (strcmp(opcode, "add") == 0)
+	{
+		add(stack, line_number);
+	}
+	else if (strcmp(opcode, "f_div") == 0)
+	{
+		f_div(stack, line_number);
+	}
+	else if (strcmp(opcode, "mul") == 0)
+	{
+		mul(stack, line_number);
+	}
+	else if (strcmp(opcode, "pop") == 0)
+	{
+		pop(stack, line_number);
+	}
+	else if (strcmp(opcode, "sub") == 0)
+	{
+		sub(stack, line_number);
+	}
+	else if (strcmp(opcode, "swap") == 0)
+	{
+		swap(stack, line_number);
+	}
+	else if (strcmp(opcode, "push") == 0)
+	{
+		f_push(stack, line_number);
+	}
+	else if (strcmp(opcode, "pall") == 0)
+	{
+		f_pall(stack, line_number);
+	}
+	else if (strcmp(opcode, "pint") == 0)
+	{
+		f_pint(stack, line_number);
+	}
+}
+
 /**
  * main - Main entry point of monty
  * Description - Entry point
  * @argc: Number of arguments
- * @argv:
- * Return:
+ * @argv: Array of argument strings
+ * Return: 0 on Success and EXIT_FAILURE
  */
 
 int main(int argc, char *argv[])
@@ -41,48 +93,9 @@ int main(int argc, char *argv[])
 			continue;
 		}
 
-	if (strcmp(opcode, "nop") == 0)
-	{
-		nop();
-	}
-	else if (strcmp(opcode, "add") == 0)
-	{
-		add(&stack, line_number);
-	}
-		else if (strcmp(opcode, "f_div") == 0)
-	{
-		f_div(&stack, line_number);
-	}
-		else if (strcmp(opcode, "mul") == 0)
-	{
-		mul(&stack, line_number);
-	}
-	else if (strcmp(opcode, "pop") == 0)
-	{
-		pop(&stack, line_number);
-	}
-	else if (strcmp(opcode, "sub") == 0)
-	{
-		sub(&stack, line_number);
-	}
-	else if (strcmp(opcode, "swap") == 0)
-	{
-		swap(&stack, line_number);
-	}
-	else if (strcmp(opcode, "push") == 0)
-	{
-		f_push(&stack, line_number);
-	}
-	else if (strcmp(opcode, "pall") == 0)
-	{
-		f_pall(&stack, line_number);
-	}
-	else if(strcmp(opcode, "pint") == 0)
-	{
-		f_pint(&stack, line_number);
-	}
+		execute_opcode(&stack, opcode, line_number);
 
-	line_number++;
+		line_number++;
 	}
 
 	fclose(file);

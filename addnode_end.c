@@ -4,7 +4,7 @@
  * addnode_end - A function that adds a node at the bottom of the stack
  * Description - Adds a node to the bottom of the stack
  * @head: A pointer to a pointer to the head of the stack
- * counter: Number of lines
+ * @counter: Number of lines
  * Return: No return (nothing)
  */
 
