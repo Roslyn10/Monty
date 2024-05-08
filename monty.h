@@ -70,6 +70,11 @@ void sub(stack_t **head, unsigned int counter);
 void swap(stack_t **head, unsigned int counter);
 void f_pchar(stack_t **head, unsigned int counter);
 void f_mod(stack_t **head, unsigned int counter);
+void f_push(stack_t **head, unsigned int counter);
+void f_pall(stack_t **head, unsigned int counter);
+void f_pint(stack_t **head, unsigned int counter);
+void addnode(stack_t **head, int n);
+struct stack_s *new_node(int n);
 
 
 #endif /**MONYY_H**/
