@@ -3,21 +3,39 @@
 /**
  * new_node - A function that creates a new node
  * Description - Creates a new node
- * @n: The integer 
+ * @n: The integer
  * Return: The new node
  */
 
 
-struct stack_s *new_node(int n)
+stack_t *new_node(int n)
 {
-	struct stack_s *node = (struct stack_s*)malloc(sizeof(struct stack_s));
+	stack_t *node;
+
+	node = malloc(sizeof(stack_t));
 	if (node == NULL)
 	{
 		printf("Error\n");
-		exit(EXIT_FALIURE);
+		exit(EXIT_FAILURE);
 	}
 	node->n = n;
 	node->prev = NULL;
 	node->next = NULL;
-	return node;
+	return (node);
+}
+
+/**
+ * addnode - A function that adds a new node to the stack
+ * Description - Adds a node to the stack
+ * @head: A pointer to a pointer to the head of the node
+ * @n: An integer
+ * Return: No return (nothing)
+ */
+
+void addnode(stack_t **head, int n)
+{
+	stack_t *newNode = new_node(n);
+
+	newNode->next = *head;
+	*head = newNode;
 }
