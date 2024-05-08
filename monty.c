@@ -69,6 +69,18 @@ int main(int argc, char *argv[])
 	{
 		swap(&stack, line_number);
 	}
+	else if (strcmp(opcode, "push") == 0)
+	{
+		f_push(&stack, line_number);
+	}
+	else if (strcmp(opcode, "pall") == 0)
+	{
+		f_pall(&stack, line_number);
+	}
+	else if(strcmp(opcode, "pint") == 0)
+	{
+		f_pint(&stack, line_number);
+	}
 
 	line_number++;
 	}
