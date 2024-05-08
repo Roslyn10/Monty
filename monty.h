@@ -74,6 +74,6 @@ void f_pall(stack_t **head, unsigned int counter);
 void f_pint(stack_t **head, unsigned int counter);
 void addnode(stack_t **head, int n);
 struct stack_s *new_node(int n);
-
+void addqueue(stack_t **head, unsigned int counter);
 
 #endif /**MONYY_H**/
