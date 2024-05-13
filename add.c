@@ -7,6 +7,7 @@
  * @counter: Number of lines
  * Return: No return (nothing)
  */
+
 void add(stack_t **head, unsigned int counter)
 {
 	stack_t *h;
