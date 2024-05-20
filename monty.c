@@ -89,6 +89,7 @@ int main(int argc, char *argv[])
 	FILE *file = fopen(argv[1], "r");
 	stack_t *stack = NULL;
 	char opcode[128];
+	size_t len;
 
 	if (argc != 2)
 	{
@@ -102,6 +103,11 @@ int main(int argc, char *argv[])
 	}
 	while (fgets(opcode, sizeof(opcode), file) != NULL)
 	{
+		len = strlen(opcode);
+		if (len > 0 && opcode[len - 1] == '\n')
+		{
+			opcode[len - 1] = '\0';
+		}
 		line_number++;
 
 		if (process_command(&stack, opcode, line_number) == 0)
