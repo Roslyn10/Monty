@@ -1,7 +1,6 @@
 #include "monty.h"
 #include <stdio.h>
 
-bus_t bus = {NULL, NULL, NULL, 0};
 #define MAX_LINE_LENGTH 200
 
 /**
@@ -45,7 +44,7 @@ void execute_opcode(stack_t **stack, const char *opcode, int line_number)
 	}
 	else if (strcmp(opcode, "push") == 0)
 	{
-		f_push(stack, line_number);
+		f_push(stack, NULL, line_number);
 	}
 	else if (strcmp(opcode, "pall") == 0)
 	{
@@ -58,6 +57,25 @@ void execute_opcode(stack_t **stack, const char *opcode, int line_number)
 }
 
 /**
+ * process_command - A function that always returns 1
+ * Description - Always returns 1
+ * @stack: The stack
+ * @opcode: The opcodes
+ * @line_number: The line number
+ * Return: 1 on Success, 0 on failure
+ */
+
+int process_command(stack_t **stack, char *opcode, unsigned int line_number)
+{
+	if (*stack || *opcode || line_number)
+	{
+
+	}
+
+	return (1);
+}
+
+/**
  * main - Main entry point of monty
  * Description - Entry point
  * @argc: Number of arguments
@@ -67,41 +85,34 @@ void execute_opcode(stack_t **stack, const char *opcode, int line_number)
 
 int main(int argc, char *argv[])
 {
-	FILE *file = NULL;
-	char line[MAX_LINE_LENGTH];
-	char *opcode;
+	int line_number = 0;
+	FILE *file = fopen(argv[1], "r");
 	stack_t *stack = NULL;
-	int line_number = 1;
+	char opcode[128];
 
 	if (argc != 2)
 	{
-		fprintf(stderr, "USAGE: monty file\n");
+		fprintf(stderr, "Usage: monty file\n");
 		exit(EXIT_FAILURE);
 	}
-
-	file = fopen(argv[1], "r");
-
 	if (file == NULL)
 	{
-		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
+		fprintf(stderr, "Error : Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
-
-	while (fgets(line, sizeof(line), file) != NULL)
+	while (fgets(opcode, sizeof(opcode), file) != NULL)
 	{
-		opcode = strtok(line, " \t\n");
-		if (opcode == NULL || *opcode == '#')
-		{
-			continue;
-		}
-
-		execute_opcode(&stack, opcode, line_number);
-
 		line_number++;
+
+		if (process_command(&stack, opcode, line_number) == 0)
+		{
+			fprintf(stderr, "L%d: unknown instruction %s\n", line_number, opcode);
+			fclose(file);
+			free_stack(stack);
+			exit(EXIT_FAILURE);
+		}
 	}
-
 	fclose(file);
-
 	free_stack(stack);
 
 	return (0);
